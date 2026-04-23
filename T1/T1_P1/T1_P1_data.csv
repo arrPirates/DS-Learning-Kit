@@ -1,0 +1,26 @@
+user_id,signup_date,plan_type,monthly_fee,credit_score,is_active,transactions_last_30d,referral_source,notes
+1001,2023-01-15,free,$0.00,720,True,12,organic,
+1002,02/22/2023,premium,$9.99,685,1,34,social,
+1003,2023-03-08,free,$0.00,N/A,False,0,paid,First-time user
+1004,04/01/2023,enterprise,$49.99,810,True,,referral,High value
+1005,2023-04-19,premium,$9.99,590,0,8,organic,
+1006,05/10/2023,free,$0.00,740,yes,21,social,
+1007,2023-06-01,free,$0.00,670,True,5,paid,
+USR1008,06/15/2023,premium,$9.99,755,False,18,organic,
+1009,2023-07-22,enterprise,$49.99,820,1,67,referral,
+1010,08/09/2023,free,$0.00,610,0,2,social,
+1011,2023-08-30,premium,$9.99,,True,14,organic,
+1012,09/12/2023,free,$0.00,695,False,0,paid,Downgraded
+1013,10/05/2023,premium,$9.99,730,1,29,social,
+1014,2023-10-18,free,$0.00,N/A,no,,,
+1015,11/01/2023,enterprise,$49.99,800,True,55,referral,
+1016,2023-11-20,free,$0.00,640,0,3,organic,
+1017,12/08/2023,premium,$9.99,710,True,22,paid,
+1018,2024-01-03,free,$0.00,580,False,1,social,
+1019,01/20/2024,premium,$9.99,760,1,41,organic,
+1020,2024-02-14,enterprise,$49.99,835,True,78,referral,Top user
+USR1021,03/01/2024,free,$0.00,,False,0,paid,
+1022,2024-03-15,premium,$9.99,700,True,17,social,
+1023,04/02/2024,free,$0.00,655,0,6,organic,
+1024,2024-04-22,premium,$9.99,720,True,31,paid,
+1025,2024-05-10,enterprise,$49.99,790,1,59,referral,
