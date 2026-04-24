@@ -10,6 +10,35 @@ This file is the persistent brain of the prep program. At the start of every ses
 3. Update `## Session Log` and problem statuses before doing anything else
 4. Proceed with next problem, repeat, or new tier as appropriate
 
+## PROMPT FORMAT STANDARD
+
+Every problem prompt (`T{n}_P{n}_prompt.md`) must include a **Function Reference** section placed between the dataset description and the tasks. The section introduces the functions relevant to that problem without applying them to the actual tasks — the learner makes that connection. Use generic placeholder names throughout (e.g. `df['col']`, `'some_value'`) — never the real dataset column names or values.
+
+Each function entry must follow this exact three-layer format:
+
+**Layer 1 — Full signature**
+Show the complete function signature with every parameter and its default value.
+```
+Series.str.contains(pat, case=True, flags=0, na=None, regex=True)
+```
+
+**Layer 2 — Parameter list**
+A bullet for every parameter: its type, its default, and a plain-English description of what it does and what values it accepts. Never tell the learner to "look up" a parameter — document it inline.
+```
+- pat (str): The pattern to search for.
+- case (bool, default True): If True, match is case-sensitive. If False, case-insensitive.
+- na (scalar, default None): How null values are handled. na=False returns False for nulls instead of NaN.
+...
+```
+
+**Layer 3 — Example block**
+A realistic but generic code example showing the function in practice, with inline comments explaining what the code does and what output or behavior to expect. Show multiple variants when parameters change the behavior meaningfully.
+```python
+result = df[df['name'].str.contains('corp', case=False, na=False)]
+# Matches 'corp', 'Corp', 'CORP' — case=False makes it flexible.
+# na=False prevents NaN rows from crashing the filter mask.
+```
+
 **File naming convention for submissions:** `T{tier}_{problem_number}.py`
 - Example: `T1_P3.py` = Tier 1, Problem 3
 - SQL submissions (where applicable): `T{tier}_{problem_number}_sql.py`
